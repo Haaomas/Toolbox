@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="document php" method="Get ou POST">
+        <fieldset> <!--si on veut un encadrer regroupant les input-->
+            <div>
+                <label for="même"></label> <!--le for est tjr associé à l'id deson input-->
+                <input type="letype" id="même" name="email" placeholder="Ecrire votre email ici" required>
+            </div>
+
+            <div>
+                <label for="même"></label>
+                <input type="letype" id="même" name="telephone" placeholder="0600000000" maxlength="10" pattern="^[0-9]{10}">
+                <!--name pour définir ce qui ira en PhP-->
+            </div>
+        </fieldset>
+
+        
+        <!-- BOUTON Valider-->
+        <button type="submit">Envoyer</button>
+
+    </form>

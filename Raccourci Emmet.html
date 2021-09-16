@@ -1,0 +1,237 @@
+<!-- Raccourci barre de navigation google 
+CTRL + L -->
+
+
+
+<!-- saved from url=(0179)http://blog.masamune.fr/jcQpjm9NxDpQydRi/wp-content/uploads/2017/07/Recap_emmet_avec_expressions_a_etendre___expressions_etendues___et_selection_perso_des_raccourcis_preferes.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>!
+
+
+
+	
+	<title>
+	</title>
+
+
+	
+
+
+
+
+<!-- Balise simple -->
+a
+<a href="http://blog.masamune.fr/jcQpjm9NxDpQydRi/wp-content/uploads/2017/07/Recap_emmet_avec_expressions_a_etendre___expressions_etendues___et_selection_perso_des_raccourcis_preferes.html"></a>
+
+
+<!-- Utilisation de syntaxe "pseudo-css" -->
+<!-- Ajout d'une classe, si aucune balise n'est spécifiée, div est utilisée -->
+.maClass
+<div class="maClass"></div>
+
+
+<!-- Ajout d'un Id -->
+#monId
+<div id="monId"></div>
+
+<!-- Ajout de classes multiple & d'id -->
+span.maPremiereClasse.maDeuxiemeClasse#monId
+<span class="maPremiereClasse maDeuxiemeClasse" id="monId"></span>
+
+<!-- Ajout de contenu texte -->
+.maclasse{Hey bonjour !}
+<div class="maclasse">Hey bonjour !</div>
+
+
+<!-- Ajout d'un ou plusieurs attributs -->
+table[border=1]
+<table border="1"></table>
+
+
+img[title="Cliquez moi!"][alt="C'est une image"]
+<img src="http://blog.masamune.fr/jcQpjm9NxDpQydRi/wp-content/uploads/2017/07/Recap_emmet_avec_expressions_a_etendre___expressions_etendues___et_selection_perso_des_raccourcis_preferes.html" alt="C&#39;est une image" title="Cliquez moi!">
+
+
+a[href="http://masamune.fr" title="Un super site à aller voir"]{Site masamune}
+<a href="http://masamune.fr/" title="Un super site à aller voir">Site masamune</a>
+
+
+<!-- 
+Suite d'instructions
+	> permet de rentrer dans une balise
+	+ permet d'ajouter une balise au même niveau
+	^ permetde remonter d'un ou plusieurs niveaux, si utilisé plusieurs fois
+
+	/!\ Attention à ne pas laisser d'espaces dans vos suites d'instructions
+	(en dehors des textes contenus dans { } )
+-->
+main.container&gt;h1{mon Titre}+table&gt;tr&gt;td{hey1}+td{hey2}^^^footer{Mon footer}
+<main class="container">
+	<h1>mon Titre</h1>
+	<table>
+		<tbody><tr>
+			<td>hey1</td>
+			<td>hey2</td>
+		</tr>
+	</tbody></table>
+</main>
+<footer>Mon footer</footer>
+
+
+<!-- 
+Ajout de texte d'illustration, généré automatiquement
+	Le mot clé est lorem
+	Le nombre à la suite indique le nombre de mots à utiliser
+-->
+lorem20
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse accusamus reprehenderit dolores corrupti voluptatum omnis iusto error commodi magnam provident.
+
+
+<!-- 
+/!\ Attention, cette instruction s'utilise à l'intérieur d'une balise à l'aide de >,
+et non en contenu textuel à l'aide de { }
+-->
+.content&gt;lorem50
+<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis dolor, in a eius incidunt dignissimos sit porro, quam ad laudantium tempora quos impedit deleniti, soluta rerum aperiam officiis repellat. Earum vitae labore inventore delectus. Incidunt, non dignissimos, dolore ullam suscipit sequi harum, quo eveniet omnis veritatis in soluta fuga sed?</div>
+
+
+<!-- Utilisation de répétitions, avec * -->
+ul&gt;li*5
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+
+<!-- Utilisation de séparateurs avec ( ), pour les répétitions -->
+table&gt;(td&gt;(td{ma case}*4))*3
+<table>
+	<tbody><tr><td>
+		</td><td>ma case</td>
+		<td>ma case</td>
+		<td>ma case</td>
+		<td>ma case</td>
+	
+	<td>
+		</td><td>ma case</td>
+		<td>ma case</td>
+		<td>ma case</td>
+		<td>ma case</td>
+	
+	<td>
+		</td><td>ma case</td>
+		<td>ma case</td>
+		<td>ma case</td>
+		<td>ma case</td>
+	
+</tr></tbody></table>
+
+
+<!-- Utilisation de compteur de boucle, avec $ -->
+h$[title=item$]{Header $}*3
+<h1 title="item1">Header 1</h1>
+<h2 title="item2">Header 2</h2>
+<h3 title="item3">Header 3</h3>
+
+
+table&gt;(td&gt;(td{ma case n° $}*4))*3
+<table>
+	<tbody><tr><td>
+		</td><td>ma case n° 1</td>
+		<td>ma case n° 2</td>
+		<td>ma case n° 3</td>
+		<td>ma case n° 4</td>
+	
+	<td>
+		</td><td>ma case n° 1</td>
+		<td>ma case n° 2</td>
+		<td>ma case n° 3</td>
+		<td>ma case n° 4</td>
+	
+	<td>
+		</td><td>ma case n° 1</td>
+		<td>ma case n° 2</td>
+		<td>ma case n° 3</td>
+		<td>ma case n° 4</td>
+	
+</tr></tbody></table>
+
+
+<!-- Exemple récapitulatif -->
+table&gt;.row&gt;(.col&gt;lorem5)*5
+<table>
+	<tbody><tr class="row">
+		<td class="col">Lorem ipsum dolor sit amet.</td>
+		<td class="col">Facilis consectetur, itaque nulla minima!</td>
+		<td class="col">Laudantium tempora nulla iste dolore.</td>
+		<td class="col">Nulla odit accusantium cupiditate aliquam!</td>
+		<td class="col">Veritatis magni eum possimus eius.</td>
+	</tr>
+</tbody></table>
+
+
+
+
+<!-- Raccourcis clavier -->
+Ctrl + Shift + K
+Supprimer la ligne en cours
+
+
+Ctrl + Shift + D
+Dupliquer la ligne/sélection en cours
+
+
+Ctrl + Shitf + /
+Commenter
+
+
+Ctrl + Shift + Haut/Bas
+Intervertir/Déplacer lignes
+
+
+Sur un nombre, Ctrl + Flèche haut / Flèche bas
+Incrémenter, décrémenter +1
+
+
+Sur un nombre, Alt + Flèche haut / bas
+Incrémenter, décrémenter +0.1
+
+
+Sur un nombre, Alt + Shift + Flèche haut / bas
+Incrémenter, décrémenter +10
+
+
+Sélectionner, puis Ctrl + Shift + G
+Permet d'encadrer la sélection
+<div class="nice">
+	<table>
+		<tbody><tr>
+			<td></td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+Maj + Alt + Bas // ko sous linux
+Menu Selection &gt; Sélectionner ligne suivante/prec
+
+
+Ctrl + D
+Etendre la sélection au mot en cours ; si répétition de Ctrl + D, étend de plus en plus la sélection
+<div id="volume-booster-visusalizer">
+                    <div class="sound">
+                        <div class="sound-icon"></div>
+                        <div class="sound-wave sound-wave_one"></div>
+                        <div class="sound-wave sound-wave_two"></div>
+                        <div class="sound-wave sound-wave_three"></div>
+                    </div>
+                    <div class="segments-box">
+                        <div data-range="1-20" class="segment"><span></span></div>
+                        <div data-range="21-40" class="segment"><span></span></div>
+                        <div data-range="41-60" class="segment"><span></span></div>
+                        <div data-range="61-80" class="segment"><span></span></div>
+                        <div data-range="81-100" class="segment"><span></span></div>
+                    </div>
+                </div></body></html>
