@@ -1,0 +1,48 @@
+/*palette de couleur 
+https://flatuicolors.com/palette/ru */
+
+body {
+    background-color: #cf6a87;
+    color: white;
+    font-size: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 810px;
+    margin: 0 auto;
+    background-color: #63cdda;
+    padding: 1rem 2rem;
+    border: solid 10px #574b90;
+}
+
+.container h1 {
+    background-color: #303952;
+    text-align: center;
+}
+
+.container p {
+    color: #e15f41;
+}
+
+.containerdiv {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.div1 {
+    background-color: #f3a683;
+    width: calc(100% / 3);
+}
+
+.div2 {
+    background-color: #f7d794;
+    width: calc(100% / 3);
+}
+
+.div3 {
+    background-color: #778beb;
+    width: calc(100% / 3);
+}
