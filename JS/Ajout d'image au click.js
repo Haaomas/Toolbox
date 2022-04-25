@@ -1,6 +1,6 @@
 
 
-//Prend en compte des variable pour faire apparaitre l'image sur la position su click 
+//Prend en compte des variable pour faire apparaître l'image sur la position su click 
 
 let mouseX;
 let mouseY;

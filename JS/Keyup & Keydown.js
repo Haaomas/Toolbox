@@ -1,11 +1,11 @@
-//keydown quand on enfonce la touche et keyup quand on lache le doight
+//keydown quand on enfonce la touche et keyup quand on lâche le doigt
 document.addEventListener("keydown", onKeyDown);
 
 let paragraphe = document.querySelector("articlr>p");
 
 function onKeyDown(event) {
-    //en fonction de la key enoncée, je vais faire des actions diférentes 
-    switch (event.key) { //Pourtester la propriétés key
+    //en fonction de la key énoncée, je vais faire des actions différentes 
+    switch (event.key) { //Pour tester la propriétés key
         case "F12": //F012 etc en majuscule
             alert("C'est la console");
             break;

@@ -6,15 +6,15 @@ import "./App.css";
 import Agenda from "./componants/Agenda"
 
 function App(props) {
-  
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>AGENDA</h1>
-        <Agenda />
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <h1>AGENDA</h1>
+                <Agenda />
+            </header>
+        </div>
+    );
 }
 
 export default App;
@@ -34,20 +34,20 @@ function Agenda() {
             .then((response) => { //il nous donne une promesse 
                 return response.json(); //retourne moi une réponse en json
             }).then((data) => { //data = données converti en json 
-                setEvenement(data.records ) //stock la valeur de data.record dans evenement (le tableau)
+                setEvenement(data.records) //stock la valeur de data.record dans evenement (le tableau)
             });
-        }, []);
-        console.log(evenement)
-        
+    }, []);
+    console.log(evenement)
+
     return (
         <div>
             {evenement.map((element, index) => { //boucle map (vas plus vite) 
                 return (
                     <Card
-                    titre={element.fields.title}
-                    description={element.fields.description}
-                    link={element.fields.link}
-                    image={element.fields.image}
+                        titre={element.fields.title}
+                        description={element.fields.description}
+                        link={element.fields.link}
+                        image={element.fields.image}
                     />
                 )
             })}
@@ -63,7 +63,7 @@ import React from "react";
 
 function Card(props) { //permet d'envoyer les parametre rentrer dans <Card/> 
     return (
-        <div> 
+        <div>
             <h1>{props.titre}</h1> {/*props.titre pour dire je veux la propriété titre noté dans <Card/> dans Agenda*/}
             <p>{props.description}</p>
             <img src={props.image} alt="" />
